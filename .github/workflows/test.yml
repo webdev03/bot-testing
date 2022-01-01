@@ -7,9 +7,10 @@ on:
 jobs:
   wow:
     runs-on: ubuntu-latest
+    if: ${{ !github.event.issue.pull_request }}
     steps:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
       - name: do
-        run: echo ${{ github.event.issue }}
+        run: echo ${{ github.event.issue.comment }}
