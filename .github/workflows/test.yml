@@ -1,0 +1,13 @@
+name: test
+on:
+  issue_comment:
+    types:
+      - created
+
+jobs:
+  wow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v2
+      
+    
