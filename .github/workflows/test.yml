@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: 16
       - name: do thing
-        run: echo ${{ github.event.issue.body }}
+        run: echo ${{ github.event.comment.body }}
